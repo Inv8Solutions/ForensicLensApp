@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "270323881158",
+    "project_id": "forensiclens-8f082",
+    "storage_bucket": "forensiclens-8f082.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270323881158:android:9b08549291761e17efb3c7",
+        "android_client_info": {
+          "package_name": "com.example.forensiclens"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyqeDH2hepsA4h-L_61M-bPVbwjlY-sJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
