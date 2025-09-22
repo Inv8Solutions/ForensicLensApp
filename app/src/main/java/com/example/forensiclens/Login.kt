@@ -63,7 +63,7 @@ class Login: ComponentActivity() {
                 val role = documentSnapshot.getString("role") ?: "user"
                 Toast.makeText(this, "Welcome $email", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, Dashboard::class.java)
                 startActivity(intent)
                 finish()
             } else {
