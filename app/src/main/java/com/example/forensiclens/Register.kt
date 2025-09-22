@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.app.ComponentActivity
+import com.example.forensiclens.utils.LoaderHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -40,6 +41,11 @@ class Register: ComponentActivity(){
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
+
+            LoaderHelper.showLoader(this,"Registering...")
+
+
 
             auth.createUserWithEmailAndPassword(email, pass)
                 .addOnCompleteListener { task ->

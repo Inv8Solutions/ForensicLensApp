@@ -8,6 +8,7 @@ import androidx.activity.ComponentActivity
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import android.app.AlertDialog
+import com.example.forensiclens.utils.LoaderHelper
 import com.google.firebase.auth.FirebaseAuth
 
 class Dashboard : ComponentActivity() {
@@ -17,6 +18,7 @@ class Dashboard : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        LoaderHelper.showLoader(this, "Loading Dashboard...")
         setContentView(R.layout.dashboard)
 
         val webView = findViewById<WebView>(R.id.main_webview)
@@ -38,7 +40,7 @@ class Dashboard : ComponentActivity() {
                 } else{
                     val builder = AlertDialog.Builder(this@Dashboard)
                     builder.setTitle("Exit")
-                    builder.setMessage("Are you sure you want to exit?")
+                    builder.setMessage("Are you sure you want to Log out?")
                     builder.setPositiveButton("Yes") { _, _ ->
                         finish()
                     }

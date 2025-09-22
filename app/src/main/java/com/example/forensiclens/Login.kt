@@ -7,6 +7,7 @@ import android.widget.EditText
 import androidx.activity.ComponentActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.forensiclens.utils.LoaderHelper
 
 import android.view.View
 import android.widget.Toast
@@ -30,6 +31,7 @@ class Login: ComponentActivity() {
 
         //onclick listener for login
         login.setOnClickListener {
+            LoaderHelper.showLoader(this, "Logging in...")
             val email = email.text.toString().trim()
             val password = password.text.toString().trim()
 
