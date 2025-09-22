@@ -80,4 +80,9 @@ class Login: ComponentActivity() {
         startActivity(intent)
     }
 
+    fun forgotPassword(view: View) {
+        val intent = Intent(this, ForgotPassword::class.java)
+        startActivity(intent)
+    }
+
 }
