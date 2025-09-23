@@ -4,7 +4,7 @@ Practice. Capture. Master
 ---
 
 ## 🔽 Download the App  
-[![Download APK](https://img.shields.io/badge/Download-APK-red?style=for-the-badge&logo=android)](https://github.com/<username>/<repo>/releases/latest/download/app-release.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK-red?style=for-the-badge&logo=android)](https://github.com/Inv8Solutions/ForensicLensApp/releases/download/beta/ForensicLens_V1.0.0.apk)
 
 ---
 
