@@ -3,8 +3,8 @@ Practice. Capture. Master
 
 ---
 
-## 🔽 Download the App  
-[![Download APK](https://img.shields.io/badge/Download-APK-red?style=for-the-badge&logo=android)](https://github.com/Inv8Solutions/ForensicLensApp/releases/download/beta/ForensicLens_V1.0.0.apk)
+## 🔽 Download the App  (v1.0.1-beta)
+[![Download APK](https://img.shields.io/badge/Download-APK-red?style=for-the-badge&logo=android)](https://github.com/Inv8Solutions/ForensicLensApp/releases/download/v1.0.1-beta/ForensicLens.v1.0.1-beta.apk)
 
 ---
 
@@ -22,3 +22,11 @@ Forensic Lens is a training and practice tool for forensic imaging and photograp
 2. Transfer it to your Android device.  
 3. Enable **Install from Unknown Sources**.  
 4. Tap the file to install.  
+
+---
+
+## Changelogs
+v1.0.1-beta
+- Optimized Login Handlers to Prevent Element Overlaps
+- Optimized Dashboard to prevent Memory Leaks
+- Added explicit permission for internet
