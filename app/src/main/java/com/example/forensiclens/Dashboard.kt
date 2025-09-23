@@ -8,12 +8,13 @@ import androidx.activity.ComponentActivity
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import android.app.AlertDialog
+import android.content.Context
+import android.graphics.Bitmap
 import com.example.forensiclens.utils.LoaderHelper
-import com.google.firebase.auth.FirebaseAuth
+
 
 class Dashboard : ComponentActivity() {
 
-    private lateinit var auth: FirebaseAuth
     private val homeUrl = "https://inv8solutions.github.io/ForensicLens/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,13 +24,24 @@ class Dashboard : ComponentActivity() {
 
         val webView = findViewById<WebView>(R.id.main_webview)
 
-        auth = FirebaseAuth.getInstance()
-
         val webSettings: WebSettings = webView.settings
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
 
-        webView.webViewClient = WebViewClient()
+        webView.webViewClient = object : WebViewClient(){
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                super.onPageStarted(view, url, favicon)
+                LoaderHelper.showLoader(this@Dashboard,"Loading Dashboard...")
+            }
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                LoaderHelper.hideLoader()
+            }
+            override fun onReceivedError(view: WebView?, errorCode: Int, description: String?, failingUrl: String?) {
+                super.onReceivedError(view, errorCode, description, failingUrl)
+                LoaderHelper.hideLoader()
+            }
+        }
 
         webView.loadUrl(homeUrl)
 

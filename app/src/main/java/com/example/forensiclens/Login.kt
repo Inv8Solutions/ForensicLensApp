@@ -37,6 +37,7 @@ class Login: ComponentActivity() {
 
             if(email.isNotEmpty() && password.isNotEmpty()){
                 loginUser(email, password)
+
             } else{
                 Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
             }
@@ -55,6 +56,7 @@ class Login: ComponentActivity() {
                     }
                 } else{
                     Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
+                    LoaderHelper.hideLoader()
                 }
             }
     }
@@ -70,9 +72,11 @@ class Login: ComponentActivity() {
                 finish()
             } else {
                 Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
+                LoaderHelper.hideLoader()
             }
         }.addOnFailureListener {
             Toast.makeText(this, "Failed to check user", Toast.LENGTH_SHORT).show()
+            LoaderHelper.hideLoader()
         }
     }
     fun register(view: View) {
