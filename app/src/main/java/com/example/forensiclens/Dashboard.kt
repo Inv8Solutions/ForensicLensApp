@@ -18,7 +18,7 @@ class Dashboard : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        LoaderHelper.showLoader(this, "Loading Dashboard...")
+
         setContentView(R.layout.dashboard)
 
         val webView = findViewById<WebView>(R.id.main_webview)

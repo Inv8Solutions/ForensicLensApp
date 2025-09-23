@@ -16,56 +16,66 @@
         android:fontFamily="@font/dmsans"
         android:text="Check Your Email"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
+        android:layout_marginHorizontal="32dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="52dp"
-        android:text="We've sent a reset link to email address provided \n               Check your inbox or spam Folder"
+        android:gravity="center"
+        android:text="We've sent a reset link to email address provided"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
+    <TextView
+        android:id="@+id/textView131"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Check your inbox or spam folder"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
     <Button
         android:id="@+id/return_login"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/button_gradient"
         android:fontFamily="@font/dmsans"
         android:text="Back to Login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
 
     <TextView
         android:id="@+id/reset_resend_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="102dp"
+        android:clickable="true"
         android:fontFamily="@font/dmsans"
         android:text="Did not get the email? Resend"
         android:textColor="#8F9098"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/return_login"
-        android:clickable="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/return_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>

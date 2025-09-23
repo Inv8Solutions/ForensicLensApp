@@ -16,12 +16,18 @@ class CheckEmail: ComponentActivity() {
         button.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
+            finish()
         }
 
         val resend = findViewById<TextView>(R.id.reset_resend_btn)
         resend.setOnClickListener {
-
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+            finish()
         }
 
+
+
     }
+
 }

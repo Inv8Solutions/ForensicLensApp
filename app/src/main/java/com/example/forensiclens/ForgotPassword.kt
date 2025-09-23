@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.example.forensiclens.utils.LoaderHelper
 
 class ForgotPassword : ComponentActivity() {
     private lateinit var auth: FirebaseAuth
@@ -22,12 +23,12 @@ class ForgotPassword : ComponentActivity() {
 
         resetButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
-            val intent = Intent(this, CheckEmail::class.java)
-            intent.putExtra("email", email)
-            startActivity(intent)
+
+            LoaderHelper.showLoader(this,"Sending reset Email...")
 
             if (email.isEmpty()) {
                 Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
+                LoaderHelper.hideLoader()
                 return@setOnClickListener
 
             }
@@ -35,6 +36,7 @@ class ForgotPassword : ComponentActivity() {
             auth.sendPasswordResetEmail(email)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
+                        LoaderHelper.hideLoader()
                         Toast.makeText(
                             this,
                             "Password reset link sent to your email",
