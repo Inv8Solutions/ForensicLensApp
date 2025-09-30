@@ -33,4 +33,4 @@ v1.0.1-beta
 
 ---
 v1.0.2-beta
--Fixed bug where app crashes after registering then logging in newly registered account
+- Fixed bug where app crashes after registering then logging in newly registered account
